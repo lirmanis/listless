@@ -13,10 +13,21 @@
        <div class="UpperTab">
         <div class="cont1">
             <img class="pageIcon" src="https://cdn-icons-png.flaticon.com/256/8194/8194907.png">
-            <p>Listless</p>
+            <p class="Title">Listless</p>
         </div>
         <div class="cont2">
-            <p id="level"> Lv. 1 </p>
+
+            <div class="lvl">
+                <p class="levelDisplay" id="lv">Lv.</p>
+                <p class="levelDisplay"> 1</p>
+            </div>
+
+            <div class="Qoutof">
+                <p class="done"> 0  </p>
+                <p class="out" id="of"> / 10</p>
+            </div>
+
+            <div class="qcomp"></div>
         </div>
             
        </div>
