@@ -8,7 +8,6 @@ class LoginUser{
 	private $storage = "Register/data.json";
 	private $stored_users = "";
 
-	// class methods
 	public function __construct($username, $password){
 		$this->username = $username;
 		$this->password = $password;

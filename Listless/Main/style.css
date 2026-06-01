@@ -16,7 +16,7 @@ body {
 }
 
 .UpperTab {
-    background-color: rgb(39, 51, 65);
+    background-color: #0D1826;
     display: flex;
     justify-self: start;
     justify-content: space-between;
@@ -48,24 +48,120 @@ body {
 }
 
 p {
-    display: flex;
-    color: white;
-    align-items: center;
-    font-weight: bolder;
-    font-size: 200%;
-    align-self: center;
     font-family: cursive;
     text-shadow: 2px 2px 4px #2674b4;
+}
+
+.Title {
+    display: flex;
+    color: white;
+    font-weight: bolder;
+    font-size: 200%;
     text-indent: 15%;
 }
 
+/* UPPER TAB INFO DISPLAY */
+
 .cont2 {
     display: flex;
-    justify-content: end;
-    width: 50% ;
+    align-items: start;
+    flex-direction: column;
+    width: 20% ;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+/* LEVEL DISPLAY */
+
+.lvl {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://pngimg.com/uploads/sticky_note/sticky_note_PNG18964.png");
+    background-size: cover;
+}
+
+.levelDisplay {
+    display: flex;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    font-size: 160%;
+    margin: -3px;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+#lv {
+    font-size: 140%;
+    font-weight: bold;
+}
+
+.stickyNote {
+    width: 35%;
     height: 100%;
 }
 
-#level {
-    text-indent: -25%;
+
+/* A out of B COMPLETED DISPLAY */
+
+
+.Qoutof {
+    width: 60%;
+    height: 50%;
+    flex-direction: row;
+    margin: 0;
+    display: flex;
+
+}
+
+.done, .out {
+    margin: 0;
+    color: white;
+    justify-self: center;
+    align-self: center;
+}
+
+.done {
+    font-size: x-large;
+    text-indent: 40%;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+#of {
+    font-weight: bolder ;
+    font-size: large;
+    text-indent: 40%;
+    text-wrap: nowrap;
+    margin-top: 2%;
+    opacity: 0.7;
+    text-shadow: 2px 2px 4px #000000;
+    
+}
+
+/* QUESTS COMPLETED TEXT */
+
+.qcomp {
+    width: 60%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+}
+
+.bar {
+    width: 100%;
+    height: 35%;
+    background-color: rgba(72, 95, 139, 0.349);
+    border: 2px solid white;
+    margin-right: 15%;
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+}
+
+.bars {
+    width: 1.5%;
+    height: 100%;
+    background-color: aquamarine;
 }
