@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="Main/style.css">
+    <?php include 'Main/level.php'
+ ?>
 
 </head>
 <body>
@@ -23,11 +25,34 @@
             </div>
 
             <div class="Qoutof">
-                <p class="done"> 0  </p>
+                <p class="done">  
+
+                <?php 
+                    echo $Completed;
+                ?>
+                    
+               </p>
+
+
                 <p class="out" id="of"> / 10</p>
             </div>
 
-            <div class="qcomp"></div>
+                <!-- PROGRESS BAR-->
+
+            <div class="qcomp">
+                <div class="bar">
+                    <div class="bars"></div>
+                    <div class="bars"></div>
+                    <div class="bars"></div>
+                    <div class="bars"></div>
+                    <div class="bars"></div>
+                    <div class="bars"></div>
+                    <div class="bars"></div>
+                    <div class="bars"></div>
+                    <div class="bars"></div>
+                    <div class="bars"></div>
+                </div>
+            </div>
         </div>
             
        </div>
