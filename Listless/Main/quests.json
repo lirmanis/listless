@@ -1,3 +1,15 @@
-[
-    
-]
+
+{
+    "Social" : [
+        "aaa",
+        "bbb",
+        "ccc"
+    ],
+
+    "Phisycal" : [
+        "ddd",
+        "www",
+        "cfgffcc"
+    ]
+}
+

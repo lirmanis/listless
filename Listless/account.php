@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listless</title>
     <link rel="stylesheet" href="Main/style.css">
-</head>
+    <?php include('Main/level.php') ?>
+    <?php include('Main/ButtonHandler.php') ?>
+    </head>
 <body>
 
     <header>
@@ -17,12 +19,12 @@
         <div class="headerRight">
             <div class="levelBadge">
                 <p class="badge-label">Lv.</p>
-                <p class="badge-value">1</p>
+                <p class="badge-value"> <?php echo $level ?> </p>
             </div>
 
             <div class="questTracker">
                 <p class="tracker-count">
-                    <strong>0</strong> <small>/ 10</small>
+                    <strong> <?php echo $Completed ?> </strong> <small>/ 10</small>
                 </p>
 
                 <div class="segBar">
@@ -68,43 +70,48 @@
                     <img src="https://cdn-icons-png.flaticon.com/256/2058/2058703.png" alt="Dice icon">
                     <p class="roll-label">GET A RANDOM SIDE QUEST</p>
                     <p class="roll-hint">Can't find the right quest? Roll for a new one!</p>
-                    <button class="btn btn-roll">🎲 ROLL QUEST</button>
+                    <form method="post" class="rollCard">
+                    <button type="submit" name="roller" class="btn btn-roll">🎲 ROLL QUEST </button>
+                    </form>
                 </div>
             </section>
         </div>
 
         <p class="section-label">SIDE QUEST CATEGORIES</p>
         <div class="catGrid">
-            <button class="catCard">
-                <img src="https://cdn-icons-png.flaticon.com/256/1019/1019607.png" alt="Social category">
-                <p class="cat-name">Social</p>
-                <p class="cat-avail">some Available</p>
-            </button>
 
-            <button class="catCard">
-                <img src="https://cdn-icons-png.flaticon.com/256/2936/2936886.png" alt="Physical category">
-                <p class="cat-name">Physical</p>
-                <p class="cat-avail">some Available</p>
-            </button>
+            <form class="catGrid" method="post" >
+                <button value="click" type="submit" name="cat"  class="catCard">
+                    <img src="https://cdn-icons-png.flaticon.com/256/1019/1019607.png" alt="Social category">
+                    <p class="cat-name"> Social </p>
+                    <p class="cat-avail">some Available</p>
+                </button>
 
-            <button class="catCard">
-                <img src="https://cdn-icons-png.flaticon.com/256/2784/2784461.png" alt="Mental category">
-                <p class="cat-name">Mental</p>
-                <p class="cat-avail">some Available</p>
-            </button>
+                <button value="click" type="submit" name="cat"  class="catCard">
+                    <img src="https://cdn-icons-png.flaticon.com/256/2936/2936886.png" alt="Physical category">
+                    <p class="cat-name"> Physical </p>
+                    <p class="cat-avail">some Available</p>
+                </button>
 
-            <button class="catCard">
-                <img src="https://cdn-icons-png.flaticon.com/256/1067/1067555.png" alt="Lifestyle category">
-                <p class="cat-name">Lifestyle</p>
-                <p class="cat-avail">aaah Available</p>
-            </button>
+                <button value="click" type="submit" name="cat"  class="catCard">
+                    <img src="https://cdn-icons-png.flaticon.com/256/2784/2784461.png" alt="Mental category">
+                    <p class="cat-name"> Mental </p>
+                    <p class="cat-avail">some Available</p>
+                </button>
+
+                <button value="click" type="submit" name="cat"  class="catCard">
+                    <img src="https://cdn-icons-png.flaticon.com/256/1067/1067555.png" alt="Lifestyle category">
+                    <p class="cat-name"> idk </p>
+                    <p class="cat-avail">aaah Available</p>
+                </button>
+            </form>
         </div>
 
         <div class="tipCard">
             <img src="https://cdn-icons-png.flaticon.com/256/4616/4616470.png" alt="Tip icon">
             <div>
                 <p class="tip-label">TIP</p>
-                <p class="tip-text">Small steps every day lead to big changes. You've got this! ❤️</p>
+                <p class="tip-text">Small steps every day lead to big changes. You've got this!</p>
             </div>
         </div>
     </main>
