@@ -1,15 +1,89 @@
-
 {
-    "Social" : [
-        "aaa",
-        "bbb",
-        "ccc"
-    ],
-
-    "Phisycal" : [
-        "ddd",
-        "www",
-        "cfgffcc"
-    ]
+  "Social": [
+    "Pretend you’re a tourist in your own city and ask locals for directions in broken English",
+    "Start a conversation using only questions for 5 minutes",
+    "Act like you’re filming a documentary about everyday life and interview someone",
+    "Send a cryptic message to a friend and refuse to explain it",
+    "Speak in metaphors only during one conversation",
+    "Ask someone to teach you something random on the spot",
+    "Swap roles with a friend for an hour (you act like them)",
+    "Apologize to someone for something that never happened",
+    "Narrate your actions out loud while walking near people",
+    "Ask a stranger what they think happens after death",
+    "Compliment someone in an extremely specific and bizarre way",
+    "Try to start a group activity with strangers (like a clap rhythm)",
+    "Talk to someone while pretending gravity is stronger than usual",
+    "Ask someone for life advice but reject all of it dramatically",
+    "Introduce yourself with a fake backstory and stick to it",
+    "Ask people to rate invisible objects you’re holding",
+    "Speak in rhymes during a conversation",
+    "Act like you recognize someone who clearly doesn’t know you",
+    "Try to convince someone of a harmless absurd idea",
+    "Only respond with movie quotes for 10 minutes"
+  ],
+  "Physical": [
+    "Walk backwards for 10 minutes in a safe area",
+    "Try to move like a robot for an entire workout",
+    "Do a workout where every rep is extremely slow-motion",
+    "Balance an object on your head while walking",
+    "Try to mimic animal movements for 5 minutes",
+    "Climb something small like it’s a mountain expedition",
+    "Do exercises with one eye closed",
+    "Attempt to walk in a perfectly straight line without looking",
+    "Hold a dramatic pose for as long as possible",
+    "Do a workout in complete silence with no distractions",
+    "Move only in zigzags for 5 minutes",
+    "Try to sit and stand without using your hands",
+    "Walk as if the floor is lava (no stepping on certain colors)",
+    "Do random exercises decided by a dice roll",
+    "Attempt to mirror your own movements in a reflection",
+    "Move as if you're underwater",
+    "Try to freeze every time you hear a sound",
+    "Walk while pretending time is glitching",
+    "Do a full stretch routine with your eyes closed",
+    "Try to imitate a dance style you’ve never seen before"
+  ],
+  "Mental": [
+    "Invent a completely useless language and think in it",
+    "Try to remember your earliest memory in extreme detail",
+    "Imagine a world where gravity randomly turns off and map out survival rules",
+    "Create a conspiracy theory about something mundane",
+    "Try to mentally redesign a common object from scratch",
+    "Think of 10 impossible inventions and explain how they ‘work’",
+    "Write a story with no nouns",
+    "Debate yourself from two completely opposite personalities",
+    "Try to recall your entire day backwards",
+    "Invent a new number system",
+    "Imagine you’re explaining Earth to an alien species",
+    "Create rules for a game that can’t be played",
+    "Try to define something abstract like ‘time’ without using examples",
+    "Think in images only for 5 minutes",
+    "Make up fake memories and try to believe them briefly",
+    "Imagine your life as a video game and define the mechanics",
+    "Explain a simple concept in the most overly complex way possible",
+    "Try to solve a problem with intentionally bad logic",
+    "Create a map of a place that doesn’t exist"
+  ],
+  "Lifestyle": [
+    "Swap your entire daily routine order randomly",
+    "Live one day as if you’re in a different century",
+    "Only use your non-dominant hand all day",
+    "Eat foods in reverse order (dessert first, etc.)",
+    "Rename everything in your room and use those names",
+    "Set random alarms and change activity each time",
+    "Wear something completely mismatched on purpose",
+    "Reorganize your space based on a weird rule (like color or size only)",
+    "Act as if you’re being watched in a reality show",
+    "Write a schedule but intentionally follow it incorrectly",
+    "Communicate minimally for a full day",
+    "Assign ‘levels’ to daily tasks like a game",
+    "Live a day with zero digital devices",
+    "Flip a coin to decide every decision",
+    "Create a fake persona and live as them for a few hours",
+    "Treat every minor task as a dramatic mission",
+    "Change your walking route every time you move",
+    "Only consume content you normally avoid",
+    "Pretend your home is a completely new environment you must explore",
+    "Document your day as if it’s a scientific experiment"
+  ]
 }
-

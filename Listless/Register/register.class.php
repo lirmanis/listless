@@ -22,8 +22,10 @@ class RegisterUser{
 		$this->stored_users = json_decode(file_get_contents($this->storage), true);
 
 		$this->new_user = [
-			"username" => $this->username,
-			"password" => $this->encrypted_password,
+			"username"  => $this->username,
+			"password"  => $this->encrypted_password,
+			"level"     => 1,
+			"Completed" => 0,
 		];
 
 		if($this->checkFieldValues()){

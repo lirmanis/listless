@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listless</title>
     <link rel="stylesheet" href="Main/style.css">
-    <?php include('Main/level.php') ?>
     <?php include('Main/ButtonHandler.php') ?>
-    </head>
+    <?php include('Main/level.php') ?>
+</head>
 <body>
 
     <header>
@@ -51,15 +53,32 @@
                 <div class="questCard">
                     <div class="questTop">
                         <img src="https://cdn-icons-png.flaticon.com/256/724/724715.png" alt="Quest icon">
-                        <p class="quest-title">Text a friend you haven't talked to in a while.</p>
+                        <p class="quest-title"><?php echo htmlspecialchars($_SESSION['current_quest']); ?></p>
                     </div>
 
                     <div class="questTags">
-                        <p class="tag tag-social">👥 Social</p>
-                        <p class="tag tag-timer">⏰ Time Left: 2h 45m</p>
+                        <?php
+                        $timerText = "Ready to roll!";
+
+                        if ($_SESSION['last_roll_time'] != null) {
+                            $secondsPassed = time() - $_SESSION['last_roll_time'];
+                            $secondsLeft = 5 - $secondsPassed;
+
+                            if ($secondsLeft > 0) {
+                                $minutesLeft = floor($secondsLeft / 60);
+                                $secsLeft    = $secondsLeft % 60;
+                                $timerText   = "⏳ Next roll in: " . $minutesLeft . "m " . $secsLeft . "s";
+                            }
+                        }
+                        ?>
+                        <p class="tag tag-timer">⏰ <?php echo $timerText; ?></p>
                     </div>
 
-                    <button class="btn btn-complete">✓ COMPLETE QUEST</button>
+                    <?php if ($_SESSION['current_quest'] != "" && (time() - $_SESSION['last_roll_time']) >= 5): ?>
+                        <form method="post">
+                            <button type="submit" name="complete" class="btn btn-complete">✓ COMPLETE QUEST</button>
+                        </form>
+                    <?php endif; ?>
                 </div>
             </section>
 
@@ -70,45 +89,50 @@
                     <img src="https://cdn-icons-png.flaticon.com/256/2058/2058703.png" alt="Dice icon">
                     <p class="roll-label">GET A RANDOM SIDE QUEST</p>
                     <p class="roll-hint">Can't find the right quest? Roll for a new one!</p>
-                    <form method="post" class="rollCard">
-                    <button type="submit" name="roller" class="btn btn-roll">🎲 ROLL QUEST </button>
-                    </form>
                 </div>
+
+                <form method="post">
+                    <button type="submit" name="roller" class="btn btn-roll">🎲 ROLL QUEST</button>
+                </form>
             </section>
         </div>
 
         <p class="section-label">SIDE QUEST CATEGORIES</p>
         <div class="catGrid">
 
-            <form class="catGrid" method="post" >
-                <button value="click" type="submit" name="cat" class="catCard">
+            <form method="post" style="display: contents;">
+                <button value="social" type="submit" name="cat"
+                    class="catCard <?php if($_SESSION['selected'] == 'social') echo 'catCard-active'; ?>">
                     <img src="https://cdn-icons-png.flaticon.com/256/1019/1019607.png" alt="Social category">
                     <p class="cat-name"> Social </p>
-                    <p class="cat-avail">some Available</p>
+                    <p class="cat-avail">20 Available</p>
                 </button>
 
-                <button value="click" type="submit" name="cat"  class="catCard">
+                <button value="physical" type="submit" name="cat"
+                    class="catCard <?php if($_SESSION['selected'] == 'physical') echo 'catCard-active'; ?>">
                     <img src="https://cdn-icons-png.flaticon.com/256/2936/2936886.png" alt="Physical category">
                     <p class="cat-name"> Physical </p>
-                    <p class="cat-avail">some Available</p>
+                    <p class="cat-avail">20 Available</p>
                 </button>
 
-                <button value="click" type="submit" name="cat"  class="catCard">
+                <button value="mental" type="submit" name="cat"
+                    class="catCard <?php if($_SESSION['selected'] == 'mental') echo 'catCard-active'; ?>">
                     <img src="https://cdn-icons-png.flaticon.com/256/2784/2784461.png" alt="Mental category">
                     <p class="cat-name"> Mental </p>
-                    <p class="cat-avail">some Available</p>
+                    <p class="cat-avail">20 Available</p>
                 </button>
 
-                <button value="click" type="submit" name="cat"  class="catCard">
+                <button value="lifestyle" type="submit" name="cat"
+                    class="catCard <?php if($_SESSION['selected'] == 'lifestyle') echo 'catCard-active'; ?>">
                     <img src="https://cdn-icons-png.flaticon.com/256/1067/1067555.png" alt="Lifestyle category">
-                    <p class="cat-name"> idk </p>
-                    <p class="cat-avail">aaah Available</p>
+                    <p class="cat-name"> Lifestyle </p>
+                    <p class="cat-avail">20 Available</p>
                 </button>
             </form>
         </div>
 
         <div class="tipCard">
-            <img src="https://cdn-icons-png.flaticon.com/256/4616/4616470.png" alt="Tip icon">
+            <img src="Main/image-removebg-preview.png" alt="Tip icon">
             <div>
                 <p class="tip-label">TIP</p>
                 <p class="tip-text">Small steps every day lead to big changes. You've got this!</p>

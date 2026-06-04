@@ -1,7 +1,9 @@
 [
     {
         "username": "weer",
-        "password": "$2y$10$gSm1VU9\/OqSPd\/9uRx71wuMC\/q3jky9qOjyYqUL7BcZS3qzTimgDa"
+        "password": "$2y$10$gSm1VU9\/OqSPd\/9uRx71wuMC\/q3jky9qOjyYqUL7BcZS3qzTimgDa",
+        "level": 1,
+        "Completed": 3
     },
     {
         "username": "Kirvbis",
@@ -10,5 +12,19 @@
     {
         "username": "reek",
         "password": "$2y$10$CqI2TqS3XXueUWgk4gdk4usm6ITGjZxKSZRrrh.OgT4wJqHeQaZvi"
+    },
+    {
+        "username": "krissters",
+        "password": "$2y$10$sBHWbnamixRuaDP\/mJzXKOH8\/IZhc4fuUvuUJmk3i99nzBddMqQiO"
+    },
+    {
+        "username": "kristeers",
+        "password": "$2y$10$7ZfMerNxSSuxbEQdS8uGPuwCCBeCsMlS7W2.5BDVGaYoJ670tI8ZK"
+    },
+    {
+        "username": "kriters",
+        "password": "$2y$10$lqfSBm2VscvBYyo9duwaHOE9S7juSLP9TJizYimBBfm09CDjw6Lpq",
+        "level": 1,
+        "Completed": 0
     }
 ]

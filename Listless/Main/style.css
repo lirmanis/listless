@@ -244,11 +244,13 @@ main {
 }
 
 .roll-hint {
+    margin-bottom: 2%;
     font-size: 11px;
     color: rgba(200, 185, 255, 0.65);
 }
 
 .btn-roll {
+    width: 100%;
     background: #e0e0e0;
     color: #2d1f5e;
 }
@@ -289,6 +291,11 @@ main {
     box-shadow: 0 2px 12px rgba(80, 60, 140, 0.2);
 }
 
+.catCard-active {
+    border-color: #4a3a8a;
+    background: #332a5e;
+    box-shadow: 0 2px 12px rgba(80, 60, 140, 0.4);
+}
 
 .catCard img {
     width: 36px;
@@ -316,14 +323,13 @@ main {
     padding: 3% 4%;
     display: flex;
     align-items: center;
-    gap: 3%;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     height: 10px;
 }
 
 .tipCard img {
     width: 10%;
-    height: 60px;
+    height: 110px;
     object-fit: contain;
 }
 

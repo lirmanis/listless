@@ -22,6 +22,11 @@ class LoginUser{
 				if(password_verify($this->password, $user['password'])){
 					session_start();
 					$_SESSION['user'] = $this->username;
+
+					// Load this user's saved level progress
+					$_SESSION['level']     = isset($user['level'])     ? $user['level']     : 1;
+					$_SESSION['Completed'] = isset($user['Completed']) ? $user['Completed'] : 0;
+
 					header("location: account.php"); exit();
 				}
 			}
@@ -29,4 +34,4 @@ class LoginUser{
 		return $this->error = "Wrong username or password";
 	}
 
-} 
+}
