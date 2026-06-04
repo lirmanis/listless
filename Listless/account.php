@@ -81,7 +81,7 @@
         <div class="catGrid">
 
             <form class="catGrid" method="post" >
-                <button value="click" type="submit" name="cat"  class="catCard">
+                <button value="click" type="submit" name="cat" class="catCard">
                     <img src="https://cdn-icons-png.flaticon.com/256/1019/1019607.png" alt="Social category">
                     <p class="cat-name"> Social </p>
                     <p class="cat-avail">some Available</p>

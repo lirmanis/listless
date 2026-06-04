@@ -1,43 +1,38 @@
 <?php
 
-    $data = [
-        'Selected' => false,
-        'QuestRolled' => false,
-        'Timer'=> 10,
-    ];
+    $selected = false;
 
     if (isset($_POST["cat"])) {
-        CatSelect($data);
+        CatSelect($selected);
     }
 
     if (isset($_POST["roller"])) {
-        Roll($data);
+        Roll($selected);
     }
 
-    function CatSelect(array $data) {
-        global $data;
 
-        if($data['Selected'] == false) {
-            $data['Selected'] = true;
-            $data['ButtonName'] = "Selected";
+    function CatSelect($selected = false) {
+        global $selected;
+
+        if($selected == false) {
+            $selected = true;
         }
 
         else {
-            $data['Selected'] = false;
+            $selected = false;
         }
     }
 
-    function Roll(array $data) {
-        global $data;
 
-        if($data['Selected'] == false) {
+    function Roll($selected) {
+        global $selected;
+
+        if($selected == false) {
             echo "nooo";
-            return;
         }
         else {
             echo 'ha';
         }
-
     }
 
 
